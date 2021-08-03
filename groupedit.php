@@ -179,7 +179,7 @@
                                                 </a>
                                                 </span>
                                                 <span>
-                                                <a href="delete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <a href="groupdelete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
                                                     <i class="fa fa-trash action-icon"></i>
                                                 </a>
                                                 </span>
@@ -213,10 +213,38 @@
 
                                         <!-- Modal body -->
                                         <form action="insertGroupData.php" method="POST">
+                                            <?php
+                                                include 'dbcon.php';
+                                                $ids = $_GET['id'];
+                                                $showquery = "select * from groupdb where id=$ids";
+                                                $showdata = mysqli_query($con,$showquery);
+                                                $arrdata = mysqli_fetch_array($showdata);
+                                                if(isset($_POST['submit'])){
+                                                    $idupdate=$_GET['id'];
+                                                    $gname=$_POST['gname'];
+                                                    // $insertquery=" insert into student(name,mobile,degree,address)value('$name','$mobile','$degree','$address') ";
+                                                    $query = "update groupdb set id=$idupdate, gname='$gname' where id=$idupdate";
+                                                    $res=mysqli_query($con,$query);
+                                        
+                                                    if($res){
+                                                    ?>
+                                                    <script>
+                                                        alert("data updated properly");
+                                                    </script>
+                                                    <?php
+                                                    }else{
+                                                    ?>
+                                                    <script>
+                                                        alert("data not updated properly");
+                                                    </script>
+                                                    <?php
+                                                    }
+                                                }
+                                            ?>
                                             <div class="modal-body">
                                                 <div class="form-group">
                                                     <label for="usr">Group Name:</label>
-                                                    <input type="text" name="gname" class="form-control" id="usr">
+                                                    <input type="text" name="gname" class="form-control" value="<?php echo $arrdata['groupName'];?>">
                                                 </div>
                                                 <!-- <select name="cars" class="custom-select">
                                                 <option selected>Select your Customer</option>
@@ -258,6 +286,9 @@
         })
         $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
+        });
+        $(document).ready(function(){
+        $("#myModal").modal('show');
         });
     </script>
     </script>
