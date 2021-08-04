@@ -17,5 +17,5 @@
             </script>
         <?php
     }
-    header('location: display.php');
+    header('location: customerGroup.php');
 ?>

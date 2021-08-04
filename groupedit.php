@@ -179,7 +179,7 @@
                                                         </a>
                                                     </span>
                                                     <span>
-                                                        <a href="delete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                        <a href="groupDelete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
                                                             <i class="fa fa-trash action-icon"></i>
                                                         </a>
                                                     </span>
@@ -212,8 +212,10 @@
                                         </div>
 
                                         <!-- Modal body -->
-                                        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
+                                        <form action="" method="POST">
                                             <?php
+                                            if(isset($_GET['id']))
+                                            {
                                             include 'dbcon.php';
                                             $ids = $_GET['id'];
 
@@ -221,28 +223,8 @@
                                             $showdata = mysqli_query($con, $showquery);
                                             $arrdata = mysqli_fetch_array($showdata);
                                             // print_r($_POST);
+                                            ?>
                                             
-                                            if(isset($_POST['update'])) {
-                                                $idupdate = $_GET['id'];
-                                                $gname = $_POST['gname'];
-                                                echo $query = "update groupdb set groupName='$gname' where id=$idupdate";
-                                                $res = mysqli_query($con, $query);
-                                                // print_r($res);
-                                                if ($res) {
-                                            ?>
-                                                    <script>
-                                                        alert("data updated properly");
-                                                    </script>
-                                                <?php
-                                                } else {
-                                                ?>
-                                                    <script>
-                                                        alert("data not updated properly");
-                                                    </script>
-                                            <?php
-                                                }
-                                            }
-                                            ?>
                                             <div class="modal-body">
                                                 <div class="form-group">
                                                     <label for="usr">Group Name:</label>
@@ -261,6 +243,7 @@
                                             <div class="modal-footer">
                                                 <input type="submit" name="update" class="btn btn-success" value="UPDATE">
                                             </div>
+                                            <?php }?>
                                         </form>
                                     </div>
                                 </div>
@@ -282,6 +265,29 @@
             </div>
         </div>
     </div>
+    <?php
+        // print_r($_POST);
+        if(isset($_POST['update'])) {
+            $idupdate = $_GET['id'];
+            $gname = $_POST['gname'];
+            echo $query = "update groupdb set groupName='$gname' where id=$idupdate";
+            $res = mysqli_query($con, $query);
+            
+            if ($res) {
+        ?>
+                <script>
+                    alert("data updated properly");
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    alert("data not updated properly");
+                </script>
+        <?php
+            }
+        }
+    ?>
     </script>
     <!--jquery js -->
     <script src="js/jquery-min.js"></script>

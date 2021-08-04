@@ -14,9 +14,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!--Font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -29,11 +27,8 @@
                 <div class="container_header phone_view border_top_bott">
                     <div class="row">
                         <div class="col-md-12 d-flex justify-content-between align-items-center">
-                            <div class="menu-icon"> <a href="javascript:void(0)"
-                                    class="menu-toggler sidebar-toggler"></a> </div>
-                            <div class="logo d-flex align-items-center justify-content-center"> <a
-                                    href="javascript:void(0)"> <strong class="logo_icon"> <img
-                                            src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
+                            <div class="menu-icon"> <a href="javascript:void(0)" class="menu-toggler sidebar-toggler"></a> </div>
+                            <div class="logo d-flex align-items-center justify-content-center"> <a href="javascript:void(0)"> <strong class="logo_icon"> <img src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
                                         <img src="images/small-logo.png" alt=""> </span> </a> </div>
                             <div class="right_detail">
                                 <div class="row d-flex align-items-center justify-content-end">
@@ -41,9 +36,7 @@
                                         <div class="right_bar_top d-flex align-items-center">
 
                                             <!-- notification_Start -->
-                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="false">
+                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false">
                                                     <i class="fa fa-bell"></i> <span class="badge_coun"> 6 </span> </a>
                                                 <ul class="dropdown-menu scroll_auto height_fixed">
                                                     <li class="bigger">
@@ -53,8 +46,7 @@
                                                     <li>
                                                         <ul class="dropdown-menu-list">
                                                             <li> <a href="javascript:void(0)"> <span class="time">just
-                                                                        now</span> <span class="details"> <span
-                                                                            class="notification-icon deepPink-bgcolor">
+                                                                        now</span> <span class="details"> <span class="notification-icon deepPink-bgcolor">
                                                                             <i class="fa fa-check"></i> </span>
                                                                         Congratulations!. </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">3
@@ -65,25 +57,19 @@
                                                                 </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">7
                                                                         mins</span> <span class="details">
-                                                                        <span class="notification-icon blue-bgcolor"> <i
-                                                                                class="fa fa-comments-o"></i>
+                                                                        <span class="notification-icon blue-bgcolor"> <i class="fa fa-comments-o"></i>
                                                                         </span> <b>Sneha Jogi </b>sent you a message.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">12
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon pink"> <i
-                                                                                class="fa fa-heart"></i>
+                                                                        mins</span> <span class="details"> <span class="notification-icon pink"> <i class="fa fa-heart"></i>
                                                                         </span> <b>Ravi Patel </b>like your photo.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">15
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon yellow"> <i
-                                                                                class="fa fa-warning"></i> </span>
+                                                                        mins</span> <span class="details"> <span class="notification-icon yellow"> <i class="fa fa-warning"></i> </span>
                                                                         Warning! </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">10
                                                                         hrs</span> <span class="details">
-                                                                        <span class="notification-icon red"> <i
-                                                                                class="fa fa-times"></i> </span>
+                                                                        <span class="notification-icon red"> <i class="fa fa-times"></i> </span>
                                                                         Application
                                                                         error. </span> </a> </li>
                                                         </ul>
@@ -93,15 +79,12 @@
                                             <!-- notification_End -->
 
                                             <!-- Dropdown_User -->
-                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="true">
+                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true">
                                                     <img class="img-circle pro_pic" src="images/user3.png" alt=""> </a>
                                                 <ul class="dropdown-menu dropdown-menu-default">
                                                     <li>
                                                         <div class="user-panel">
-                                                            <div class="user_image"> <img src="images/user3.png"
-                                                                    class="img-circle mCS_img_loaded" alt=""> </div>
+                                                            <div class="user_image"> <img src="images/user3.png" class="img-circle mCS_img_loaded" alt=""> </div>
                                                             <div class="info">
                                                                 <p> Pankaj Kumar </p>
                                                                 <a href="#"> info@offerplant.com</a>
@@ -144,8 +127,7 @@
                     </li>
                     <li> <a href="customers.php" class=" active"> <i class="fas fa-user"></i><span>Customers</span></a>
                     </li>
-                    <li> <a href="products.php" class=" active"><i
-                                class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
+                    <li> <a href="products.php" class=" active"><i class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
                     <li> <a href="dailyTask.php" class=" active"><i class="fas fa-tasks"></i><span>Daily Task</span></a>
                     </li>
                     <li> <a href="index.php" class=" active"><i class="fas fa-file-alt"></i><span>Collection
@@ -179,64 +161,33 @@
                                         <th style="text-align: center;">Actions</th>
                                     </tr>
                                 </thead>
+                                <?php
+                                    include 'dbcon.php';
+                                    $q = "select * from productdb ";
+                                   
+                                    $query = mysqli_query($con,$q);
+
+                                    while($res = mysqli_fetch_array($query)){
+                                ?>
                                 <tbody>
                                     <tr>
-                                        <td>Milk-250gram</td>
-                                        <td>15/-</td>
+                                        <td><?php echo $res['productName'];?></td>
+                                        <td><?php echo $res['price']; ?></td>
                                         <td style="text-align: center;">
                                             <div class="actionBox">
                                                 <span>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="fa fa-edit action-icon"></i>
+                                                </a>
                                                 </span>
                                                 <span>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Delete">
                                                     <i class="fa fa-trash action-icon"></i>
+                                                </a>
                                                 </span>
                                                 <span class="toggle-button">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switch1">
-                                                        <label class="custom-control-label" for="switch1"></label>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Milk-500gram</td>
-                                        <td>30/-</td>
-                                        <td style="text-align: center;">
-                                            <div class="actionBox">
-                                                <span>
-                                                    <i class="fa fa-edit action-icon"></i>
-                                                </span>
-                                                <span>
-                                                    <i class="fa fa-trash action-icon"></i>
-                                                </span>
-                                                <span class="toggle-button">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switch1">
-                                                        <label class="custom-control-label" for="switch1"></label>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Milk-1kg</td>
-                                        <td>60/-</td>
-                                        <td style="text-align: center;">
-                                            <div class="actionBox">
-                                                <span>
-                                                    <i class="fa fa-edit action-icon"></i>
-                                                </span>
-                                                <span>
-                                                    <i class="fa fa-trash action-icon"></i>
-                                                </span>
-                                                <span class="toggle-button">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switch1">
+                                                        <input type="checkbox" class="custom-control-input" id="switch1">
                                                         <label class="custom-control-label" for="switch1"></label>
                                                     </div>
                                                 </span>
@@ -244,6 +195,9 @@
                                         </td>
                                     </tr>
                                 </tbody>
+                                <?php 
+                                }
+                                ?>
                             </table>
                             <a href="#" class="float" data-toggle="modal" data-target="#myModal">
                                 <i class="fa fa-plus my-float"></i>
@@ -252,30 +206,31 @@
                             <div class="modal fade" id="myModal">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
-            
+
                                         <!-- Modal Header -->
                                         <div class="modal-header">
                                             <h4 class="modal-title">Enter Group Name</h4>
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         </div>
-            
+
                                         <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                                <label for="usr">Product Name:</label>
-                                                <input type="text" class="form-control" id="usr">
+                                        <form action="insertProductData.php" method="POST">
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="usr">Product Name:</label>
+                                                    <input type="text" name="pname" class="form-control" id="usr">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="usr">Product Price:</label>
+                                                    <input type="number" name="price" class="form-control" id="usr">
+                                                </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="usr">Product Price:</label>
-                                                <input type="number" class="form-control" id="usr">
+
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                                <input type="submit" name="add" value="ADD" class="btn btn-success">
                                             </div>
-                                        </div>
-            
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-success">ADD</button>
-                                        </div>
-            
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -316,6 +271,14 @@
     <script src="js/custom-dashboard.js"></script>
     <!--jquery js -->
     <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#tabledata').DataTable();
+        })
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 <!-- Mirrored from sbtechnosoft.com/multinod/v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 May 2021 04:01:50 GMT -->
