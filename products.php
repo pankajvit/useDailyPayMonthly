@@ -181,7 +181,7 @@
                                                 </a>
                                                 </span>
                                                 <span>
-                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <a href="productDelete.php?id=<?php echo $res['Id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
                                                     <i class="fa fa-trash action-icon"></i>
                                                 </a>
                                                 </span>
