@@ -15,6 +15,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!--Font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js">
 </head>
 
 <body>
@@ -179,7 +180,7 @@
                                                 </a>
                                                 </span>
                                                 <span>
-                                                <a href="delete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <a href="groupDelete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
                                                     <i class="fa fa-trash action-icon"></i>
                                                 </a>
                                                 </span>

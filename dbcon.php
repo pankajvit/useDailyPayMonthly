@@ -9,13 +9,13 @@
     if($con) {
     ?>
         <script>
-            alert("Connection Successful");
+            // alert("Connection Successful");
         </script>
     <?php
     } else {
     ?>
         <script>
-            alert("Connection not successful");
+            // alert("Connection not successful");
         </script>
     <?php
     }

@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -161,39 +161,39 @@
                                     </tr>
                                 </thead>
                                 <?php
-                                    include 'dbcon.php';
-                                    $q = "select * from groupdb ";
-                                   
-                                    $query = mysqli_query($con,$q);
+                                include 'dbcon.php';
+                                $q = "select * from groupdb ";
 
-                                    while($res = mysqli_fetch_array($query)){
+                                $query = mysqli_query($con, $q);
+
+                                while ($res = mysqli_fetch_array($query)) {
                                 ?>
-                                <tbody>
-                                    <tr>
-                                        <td><?php echo $res['groupName'];?></td>
-                                        <td style="text-align: center;">
-                                            <div class="actionBox">
-                                                <span>
-                                                <a href="groupedit.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <i class="fa fa-edit action-icon"></i>
-                                                </a>
-                                                </span>
-                                                <span>
-                                                <a href="groupdelete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                    <i class="fa fa-trash action-icon"></i>
-                                                </a>
-                                                </span>
-                                                <span class="toggle-button">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="switch1">
-                                                        <label class="custom-control-label" for="switch1"></label>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <?php 
+                                    <tbody>
+                                        <tr>
+                                            <td><?php echo $res['groupName']; ?></td>
+                                            <td style="text-align: center;">
+                                                <div class="actionBox">
+                                                    <span>
+                                                        <a href="groupedit.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                            <i class="fa fa-edit action-icon"></i>
+                                                        </a>
+                                                    </span>
+                                                    <span>
+                                                        <a href="delete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <i class="fa fa-trash action-icon"></i>
+                                                        </a>
+                                                    </span>
+                                                    <span class="toggle-button">
+                                                        <div class="custom-control custom-switch">
+                                                            <input type="checkbox" class="custom-control-input" id="switch1">
+                                                            <label class="custom-control-label" for="switch1"></label>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                <?php
                                 }
                                 ?>
                             </table>
@@ -212,39 +212,41 @@
                                         </div>
 
                                         <!-- Modal body -->
-                                        <form action="insertGroupData.php" method="POST">
+                                        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
                                             <?php
-                                                include 'dbcon.php';
-                                                $ids = $_GET['id'];
-                                                $showquery = "select * from groupdb where id=$ids";
-                                                $showdata = mysqli_query($con,$showquery);
-                                                $arrdata = mysqli_fetch_array($showdata);
-                                                if(isset($_POST['submit'])){
-                                                    $idupdate=$_GET['id'];
-                                                    $gname=$_POST['gname'];
-                                                    // $insertquery=" insert into student(name,mobile,degree,address)value('$name','$mobile','$degree','$address') ";
-                                                    $query = "update groupdb set id=$idupdate, gname='$gname' where id=$idupdate";
-                                                    $res=mysqli_query($con,$query);
-                                        
-                                                    if($res){
-                                                    ?>
+                                            include 'dbcon.php';
+                                            $ids = $_GET['id'];
+
+                                            $showquery = "select * from groupdb where id=$ids";
+                                            $showdata = mysqli_query($con, $showquery);
+                                            $arrdata = mysqli_fetch_array($showdata);
+                                            // print_r($_POST);
+                                            
+                                            if(isset($_POST['update'])) {
+                                                $idupdate = $_GET['id'];
+                                                $gname = $_POST['gname'];
+                                                echo $query = "update groupdb set groupName='$gname' where id=$idupdate";
+                                                $res = mysqli_query($con, $query);
+                                                // print_r($res);
+                                                if ($res) {
+                                            ?>
                                                     <script>
                                                         alert("data updated properly");
                                                     </script>
-                                                    <?php
-                                                    }else{
-                                                    ?>
+                                                <?php
+                                                } else {
+                                                ?>
                                                     <script>
                                                         alert("data not updated properly");
                                                     </script>
-                                                    <?php
-                                                    }
+                                            <?php
                                                 }
+                                            }
                                             ?>
                                             <div class="modal-body">
                                                 <div class="form-group">
                                                     <label for="usr">Group Name:</label>
-                                                    <input type="text" name="gname" class="form-control" value="<?php echo $arrdata['groupName'];?>">
+                                                    <input type="text" name="gname" value="<?php echo $arrdata['groupName']?>" class="form-control" id="usr">
                                                 </div>
                                                 <!-- <select name="cars" class="custom-select">
                                                 <option selected>Select your Customer</option>
@@ -257,7 +259,7 @@
 
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
-                                                <input type="submit" name="add" class="btn btn-success" value="ADD">
+                                                <input type="submit" name="update" class="btn btn-success" value="UPDATE">
                                             </div>
                                         </form>
                                     </div>
@@ -280,17 +282,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function(){
-        $('#tabledata').DataTable();
-        })
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-        });
-        $(document).ready(function(){
-        $("#myModal").modal('show');
-        });
-    </script>
     </script>
     <!--jquery js -->
     <script src="js/jquery-min.js"></script>
@@ -311,6 +302,17 @@
     <script src="js/custom-dashboard.js"></script>
     <!--jquery js -->
     <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#tabledata').DataTable();
+        })
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        $(document).ready(function() {
+            $('#myModal').modal('show');
+        })
+    </script>
 </body>
 
 <!-- Mirrored from sbtechnosoft.com/multinod/v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 May 2021 04:01:50 GMT -->
