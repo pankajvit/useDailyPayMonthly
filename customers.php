@@ -14,9 +14,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!--Font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -29,11 +27,8 @@
                 <div class="container_header phone_view border_top_bott">
                     <div class="row">
                         <div class="col-md-12 d-flex justify-content-between align-items-center">
-                            <div class="menu-icon"> <a href="javascript:void(0)"
-                                    class="menu-toggler sidebar-toggler"></a> </div>
-                            <div class="logo d-flex align-items-center justify-content-center"> <a
-                                    href="javascript:void(0)"> <strong class="logo_icon"> <img
-                                            src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
+                            <div class="menu-icon"> <a href="javascript:void(0)" class="menu-toggler sidebar-toggler"></a> </div>
+                            <div class="logo d-flex align-items-center justify-content-center"> <a href="javascript:void(0)"> <strong class="logo_icon"> <img src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
                                         <img src="images/small-logo.png" alt=""> </span> </a> </div>
                             <div class="right_detail">
                                 <div class="row d-flex align-items-center justify-content-end">
@@ -41,9 +36,7 @@
                                         <div class="right_bar_top d-flex align-items-center">
 
                                             <!-- notification_Start -->
-                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="false">
+                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false">
                                                     <i class="fa fa-bell"></i> <span class="badge_coun"> 6 </span> </a>
                                                 <ul class="dropdown-menu scroll_auto height_fixed">
                                                     <li class="bigger">
@@ -53,8 +46,7 @@
                                                     <li>
                                                         <ul class="dropdown-menu-list">
                                                             <li> <a href="javascript:void(0)"> <span class="time">just
-                                                                        now</span> <span class="details"> <span
-                                                                            class="notification-icon deepPink-bgcolor">
+                                                                        now</span> <span class="details"> <span class="notification-icon deepPink-bgcolor">
                                                                             <i class="fa fa-check"></i> </span>
                                                                         Congratulations!. </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">3
@@ -65,25 +57,19 @@
                                                                 </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">7
                                                                         mins</span> <span class="details">
-                                                                        <span class="notification-icon blue-bgcolor"> <i
-                                                                                class="fa fa-comments-o"></i>
+                                                                        <span class="notification-icon blue-bgcolor"> <i class="fa fa-comments-o"></i>
                                                                         </span> <b>Sneha Jogi </b>sent you a message.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">12
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon pink"> <i
-                                                                                class="fa fa-heart"></i>
+                                                                        mins</span> <span class="details"> <span class="notification-icon pink"> <i class="fa fa-heart"></i>
                                                                         </span> <b>Ravi Patel </b>like your photo.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">15
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon yellow"> <i
-                                                                                class="fa fa-warning"></i> </span>
+                                                                        mins</span> <span class="details"> <span class="notification-icon yellow"> <i class="fa fa-warning"></i> </span>
                                                                         Warning! </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">10
                                                                         hrs</span> <span class="details">
-                                                                        <span class="notification-icon red"> <i
-                                                                                class="fa fa-times"></i> </span>
+                                                                        <span class="notification-icon red"> <i class="fa fa-times"></i> </span>
                                                                         Application
                                                                         error. </span> </a> </li>
                                                         </ul>
@@ -93,15 +79,12 @@
                                             <!-- notification_End -->
 
                                             <!-- Dropdown_User -->
-                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="true">
+                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true">
                                                     <img class="img-circle pro_pic" src="images/user3.png" alt=""> </a>
                                                 <ul class="dropdown-menu dropdown-menu-default">
                                                     <li>
                                                         <div class="user-panel">
-                                                            <div class="user_image"> <img src="images/user3.png"
-                                                                    class="img-circle mCS_img_loaded" alt=""> </div>
+                                                            <div class="user_image"> <img src="images/user3.png" class="img-circle mCS_img_loaded" alt=""> </div>
                                                             <div class="info">
                                                                 <p> Pankaj Kumar </p>
                                                                 <a href="#"> info@offerplant.com</a>
@@ -144,8 +127,7 @@
                     </li>
                     <li> <a href="customers.php" class=" active"> <i class="fas fa-user"></i><span>Customers</span></a>
                     </li>
-                    <li> <a href="products.php" class=" active"><i
-                                class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
+                    <li> <a href="products.php" class=" active"><i class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
                     <li> <a href="dailyTask.php" class=" active"><i class="fas fa-tasks"></i><span>Daily Task</span></a>
                     </li>
                     <li> <a href="index.php" class=" active"><i class="fas fa-file-alt"></i><span>Collection
@@ -179,10 +161,19 @@
                                         <th style="text-align: center;">Actions</th>
                                     </tr>
                                 </thead>
+                                <?php
+                                    include 'dbcon.php';
+                                    $q = "select * from customerdb";
+                                   
+                                    $query = mysqli_query($con,$q);
+                                    $i=1;
+
+                                    while($res = mysqli_fetch_array($query)){
+                                ?>
                                 <tbody>
                                     <tr>
-                                        <td>ABC</td>
-                                        <td>SadaDhala</td>
+                                        <td><?php echo $res['name'];?></td>
+                                        <td><?php echo $res['address'];?></td>
                                         <td style="text-align: center;">
                                             <div class="actionBox">
                                                 <span>
@@ -193,57 +184,18 @@
                                                 </span>
                                                 <span class="toggle-button">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switch1">
-                                                        <label class="custom-control-label" for="switch1"></label>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>XYZ</td>
-                                        <td>Ram Nagar</td>
-                                        <td style="text-align: center;">
-                                            <div class="actionBox">
-                                                <span>
-                                                    <i class="fa fa-edit action-icon"></i>
-                                                </span>
-                                                <span>
-                                                    <i class="fa fa-trash action-icon"></i>
-                                                </span>
-                                                <span class="toggle-button">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switch1">
-                                                        <label class="custom-control-label" for="switch1"></label>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>PQR</td>
-                                        <td>Municipal chowk</td>
-                                        <td style="text-align: center;">
-                                            <div class="actionBox">
-                                                <span>
-                                                    <i class="fa fa-edit action-icon"></i>
-                                                </span>
-                                                <span>
-                                                    <i class="fa fa-trash action-icon"></i>
-                                                </span>
-                                                <span class="toggle-button">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switch1">
-                                                        <label class="custom-control-label" for="switch1"></label>
+                                                        <input type="checkbox" class="custom-control-input" id="<?php echo "switch".$i;?>">
+                                                        <label class="custom-control-label" for="<?php echo "switch".$i;?>"></label>
                                                     </div>
                                                 </span>
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
+                                <?php
+                                $i++; 
+                                }
+                                ?>
                             </table>
                             <a href="#" class="float" data-toggle="modal" data-target="#myModal">
                                 <i class="fa fa-plus my-float"></i>
@@ -260,56 +212,60 @@
                                         </div>
 
                                         <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                                <label for="usr">Name :</label>
-                                                <input type="text" class="form-control" id="usr">
+                                        <form action="insertCustomerData.php" method="POST">
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="usr">Name :</label>
+                                                    <input type="text" name="name" class="form-control" id="usr">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address">Address :</label>
+                                                    <input type="text" name="address" class="form-control" id="address">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="mobile">Mobile No :</label>
+                                                    <input type="text" name="mobile" class="form-control" id="mobile">
+                                                </div>
+                                                <label for="">Select group for Customer :</label>
+                                                <select name="cgroup" class="custom-select">
+                                                <?php
+                                                    include 'dbcon.php';
+                                                    $q = "select * from groupdb ";
+                                                   
+                                                    $query = mysqli_query($con,$q);
+                
+                                                    while($res = mysqli_fetch_array($query)){
+                                                ?>
+                                                    <!-- <option selected>Select group for Customer</option> -->
+                                                    <option value="<?php echo $res['id']?>" selected><?php echo $res['groupName']; ?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                                </select>
+                                                <br>
+                                                <br>
+                                                <label for="">Check(tick) product for Customer :</label>
+                                                <?php
+                                                    include 'dbcon.php';
+                                                    $i=1;
+                                                    $selectquery = "select * from productdb ";
+                                                    $query = mysqli_query($con,$selectquery);
+                                                    while($result = mysqli_fetch_array($query)){
+                                                ?>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="<?php echo "checkbox".$i; ?>" value="<?php echo $result['Id'];?>" name="product[]">
+                                                    <label class="custom-control-label" for="<?php echo "checkbox".$i; ?>"><?php echo $result['productName'];?></label>
+                                                </div>
+                                                <?php
+                                                    $i++;
+                                                    }
+                                                ?>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="address">Address :</label>
-                                                <input type="text" class="form-control" id="address">
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                                <input type="submit" name="add" value="ADD" class="btn btn-success"/>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="mobile">Mobile No :</label>
-                                                <input type="text" class="form-control" id="mobile">
-                                            </div>
-                                            <label for="">Select group for Customer :</label>
-                                            <select name="cars" class="custom-select">
-                                                <!-- <option selected>Select group for Customer</option> -->
-                                                <option value="volvo" selected>group-1</option>
-                                                <option value="fiat">group-2</option>
-                                                <option value="audi">group-3</option>
-                                                <option value="audi">group-4</option>
-                                            </select>
-                                            <br>
-                                            <br>
-                                            <label for="">Check(tick) product for Customer :</label>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input"
-                                                    id="customCheckFirst" name="example1">
-                                                <label class="custom-control-label"
-                                                    for="customCheckFirst">Product-1</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input"
-                                                    id="customCheckSecond" name="example1">
-                                                <label class="custom-control-label"
-                                                    for="customCheckSecond">Product-2</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input"
-                                                    id="customCheckThird" name="example1">
-                                                <label class="custom-control-label"
-                                                    for="customCheckThird">Product-3</label>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-success">ADD</button>
-                                        </div>
-
+                                        </form>
                                     </div>
                                 </div>
                             </div>

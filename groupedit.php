@@ -1,3 +1,10 @@
+<?php 
+if(isset($_GET['id'])){
+    $eid = $_GET['id'];
+}else{
+    $eid=0;
+}
+?>
 <!doctype html>
 <html>
 
@@ -212,7 +219,7 @@
                                         </div>
 
                                         <!-- Modal body -->
-                                        <form action="" method="POST">
+                                        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']).'?id='.$eid; ?>" method="POST">
                                             <?php
                                             if(isset($_GET['id']))
                                             {
@@ -277,6 +284,7 @@
         ?>
                 <script>
                     alert("data updated properly");
+                    window.location.href='customerGroup.php';
                 </script>
             <?php
             } else {

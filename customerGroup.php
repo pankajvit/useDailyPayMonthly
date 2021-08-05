@@ -166,7 +166,7 @@
                                     $q = "select * from groupdb ";
                                    
                                     $query = mysqli_query($con,$q);
-
+                                    $i=1;                     
                                     while($res = mysqli_fetch_array($query)){
                                 ?>
                                 <tbody>
@@ -186,8 +186,8 @@
                                                 </span>
                                                 <span class="toggle-button">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="switch1">
-                                                        <label class="custom-control-label" for="switch1"></label>
+                                                        <input type="checkbox" class="custom-control-input" id="<?php echo "switch".$i;?>">
+                                                        <label class="custom-control-label" for="<?php echo "switch".$i;?>"></label>
                                                     </div>
                                                 </span>
                                             </div>
@@ -195,6 +195,7 @@
                                     </tr>
                                 </tbody>
                                 <?php 
+                                $i++;
                                 }
                                 ?>
                             </table>
