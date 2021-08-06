@@ -177,10 +177,14 @@
                                         <td style="text-align: center;">
                                             <div class="actionBox">
                                                 <span>
+                                                <a href="customerEdit.php?id=<?php echo $res['id'];?>" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="fa fa-edit action-icon"></i>
+                                                </a>
                                                 </span>
                                                 <span>
+                                                <a href="customerDelete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
                                                     <i class="fa fa-trash action-icon"></i>
+                                                </a>
                                                 </span>
                                                 <span class="toggle-button">
                                                     <div class="custom-control custom-switch">
