@@ -325,7 +325,7 @@ if(isset($_GET['id'])){
         });
         $(document).ready(function() {
             $('#myModal').modal('show');
-        })
+        });
     </script>
 </body>
 

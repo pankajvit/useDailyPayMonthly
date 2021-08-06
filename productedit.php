@@ -1,3 +1,10 @@
+<?php 
+if(isset($_GET['id'])){
+    $eid = $_GET['id'];
+}else{
+    $eid=0;
+}
+?>
 <!doctype html>
 <html>
 
@@ -156,44 +163,46 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Customer name</th>
-                                        <th>Address</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
                                         <th style="text-align: center;">Actions</th>
                                     </tr>
                                 </thead>
                                 <?php
                                     include 'dbcon.php';
-                                    $q = "select * from customerdb";
+                                    $q = "select * from productdb ";
                                    
                                     $query = mysqli_query($con,$q);
-                                    $i=1;
 
                                     while($res = mysqli_fetch_array($query)){
                                 ?>
                                 <tbody>
                                     <tr>
-                                        <td><?php echo $res['name'];?></td>
-                                        <td><?php echo $res['address'];?></td>
+                                        <td><?php echo $res['productName'];?></td>
+                                        <td><?php echo $res['price']; ?></td>
                                         <td style="text-align: center;">
                                             <div class="actionBox">
                                                 <span>
+                                                <a href="productedit.php?id=<?php echo $res['id'];?>" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="fa fa-edit action-icon"></i>
+                                                </a>
                                                 </span>
                                                 <span>
+                                                <a href="productDelete.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="top" title="Delete">
                                                     <i class="fa fa-trash action-icon"></i>
+                                                </a>
                                                 </span>
                                                 <span class="toggle-button">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="<?php echo "switch".$i;?>">
-                                                        <label class="custom-control-label" for="<?php echo "switch".$i;?>"></label>
+                                                        <input type="checkbox" class="custom-control-input" id="switch1">
+                                                        <label class="custom-control-label" for="switch1"></label>
                                                     </div>
                                                 </span>
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
-                                <?php
-                                $i++; 
+                                <?php 
                                 }
                                 ?>
                             </table>
@@ -207,63 +216,38 @@
 
                                         <!-- Modal Header -->
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Enter Customer Details</h4>
+                                            <h4 class="modal-title">Enter Group Name</h4>
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         </div>
 
                                         <!-- Modal body -->
-                                        <form action="insertCustomerData.php" method="POST">
+                                        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']).'?id='.$eid; ?>" method="POST">
+                                            <?php
+                                            if(isset($_GET['id']))
+                                            {
+                                            include 'dbcon.php';
+                                            $ids = $_GET['id'];
+
+                                            $showquery = "select * from productdb where id=$ids";
+                                            $showdata = mysqli_query($con, $showquery);
+                                            $arrdata = mysqli_fetch_array($showdata);
+                                            // print_r($_POST);
+                                            }
+                                            ?>
                                             <div class="modal-body">
                                                 <div class="form-group">
-                                                    <label for="usr">Name :</label>
-                                                    <input type="text" name="name" class="form-control" id="usr">
+                                                    <label for="usr">Product Name:</label>
+                                                    <input type="text" name="pname" value="<?php echo $arrdata['productName']; ?>" class="form-control" id="usr">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="address">Address :</label>
-                                                    <input type="text" name="address" class="form-control" id="address">
+                                                    <label for="usr">Product Price:</label>
+                                                    <input type="number" name="price" value="<?php echo $arrdata['price']?>" class="form-control" id="usr">
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="mobile">Mobile No :</label>
-                                                    <input type="text" name="mobile" class="form-control" id="mobile">
-                                                </div>
-                                                <label for="">Select group for Customer :</label>
-                                                <select name="cgroup" class="custom-select">
-                                                <?php
-                                                    include 'dbcon.php';
-                                                    $q = "select * from groupdb ";
-                                                   
-                                                    $query = mysqli_query($con,$q);
-                
-                                                    while($res = mysqli_fetch_array($query)){
-                                                ?>
-                                                    <!-- <option selected>Select group for Customer</option> -->
-                                                    <option value="<?php echo $res['id']?>" selected><?php echo $res['groupName']; ?></option>
-                                                <?php
-                                                }
-                                                ?>
-                                                </select>
-                                                <br>
-                                                <br>
-                                                <label for="">Check(tick) product for Customer :</label>
-                                                <?php
-                                                    include 'dbcon.php';
-                                                    $i=1;
-                                                    $selectquery = "select * from productdb ";
-                                                    $query = mysqli_query($con,$selectquery);
-                                                    while($result = mysqli_fetch_array($query)){
-                                                ?>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="<?php echo "checkbox".$i; ?>" value="<?php echo $result['id'];?>" name="product[]">
-                                                    <label class="custom-control-label" for="<?php echo "checkbox".$i; ?>"><?php echo $result['productName'];?></label>
-                                                </div>
-                                                <?php
-                                                    $i++;
-                                                    }
-                                                ?>
                                             </div>
+
                                             <!-- Modal footer -->
                                             <div class="modal-footer">
-                                                <input type="submit" name="add" value="ADD" class="btn btn-success"/>
+                                                <input type="submit" name="update" value="UPDATE" class="btn btn-success">
                                             </div>
                                         </form>
                                     </div>
@@ -287,6 +271,30 @@
         </div>
     </div>
     </div>
+    <?php
+        // print_r($_POST);
+        if(isset($_POST['update'])) {
+            $idupdate = $_GET['id'];
+            $pname = $_POST['pname'];
+            $price = $_POST['price'];
+            echo $query = "update productdb set productName='$pname', price='$price' where id=$idupdate";
+            $res = mysqli_query($con, $query);          
+            if ($res) {
+        ?>
+                <script>
+                    alert("data updated properly");
+                    window.location.href='products.php';
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    alert("data not updated properly");
+                </script>
+            <?php
+            }
+        }
+    ?>
     <!--jquery js -->
     <script src="js/jquery-min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -306,6 +314,17 @@
     <script src="js/custom-dashboard.js"></script>
     <!--jquery js -->
     <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#tabledata').DataTable();
+        });
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        });
+        $(document).ready(function() {
+            $('#myModal').modal('show');
+        });
+    </script>
 </body>
 
 <!-- Mirrored from sbtechnosoft.com/multinod/v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 May 2021 04:01:50 GMT -->
