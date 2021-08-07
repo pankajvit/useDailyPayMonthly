@@ -320,7 +320,6 @@ if(isset($_GET['id'])){
             $cgroup = $_POST['cgroup'];
             $product=$_POST['product'];
             $productlist=implode(",",$product);
-            // UPDATE `customerdb` SET `id`=[value-1],`name`=[value-2],`address`=[value-3],`mobileno`=[value-4],`customerGroup`=[value-5],`customerProduct`=[value-6] WHERE 1
             $query = "update customerdb set name='$cname', address='$address', mobileno='$mobile', customerGroup='$cgroup', customerProduct='$productlist' where id=$idupdate";
             $res = mysqli_query($con, $query);          
             if ($res) {

@@ -1,3 +1,7 @@
+<?php
+include 'dbcon.php';
+$custid = $_GET['id'];
+?>
 <!doctype html>
 <html>
 
@@ -14,9 +18,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!--Font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700,700i" rel="stylesheet">
 </head>
 
@@ -30,11 +32,8 @@
                 <div class="container_header phone_view border_top_bott">
                     <div class="row">
                         <div class="col-md-12 d-flex justify-content-between align-items-center">
-                            <div class="menu-icon"> <a href="javascript:void(0)"
-                                    class="menu-toggler sidebar-toggler"></a> </div>
-                            <div class="logo d-flex align-items-center justify-content-center"> <a
-                                    href="javascript:void(0)"> <strong class="logo_icon"> <img
-                                            src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
+                            <div class="menu-icon"> <a href="javascript:void(0)" class="menu-toggler sidebar-toggler"></a> </div>
+                            <div class="logo d-flex align-items-center justify-content-center"> <a href="javascript:void(0)"> <strong class="logo_icon"> <img src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
                                         <img src="images/small-logo.png" alt=""> </span> </a> </div>
                             <div class="right_detail">
                                 <div class="row d-flex align-items-center justify-content-end">
@@ -42,9 +41,7 @@
                                         <div class="right_bar_top d-flex align-items-center">
 
                                             <!-- notification_Start -->
-                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="false">
+                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false">
                                                     <i class="fa fa-bell"></i> <span class="badge_coun"> 6 </span> </a>
                                                 <ul class="dropdown-menu scroll_auto height_fixed">
                                                     <li class="bigger">
@@ -54,8 +51,7 @@
                                                     <li>
                                                         <ul class="dropdown-menu-list">
                                                             <li> <a href="javascript:void(0)"> <span class="time">just
-                                                                        now</span> <span class="details"> <span
-                                                                            class="notification-icon deepPink-bgcolor">
+                                                                        now</span> <span class="details"> <span class="notification-icon deepPink-bgcolor">
                                                                             <i class="fa fa-check"></i> </span>
                                                                         Congratulations!. </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">3
@@ -66,25 +62,19 @@
                                                                 </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">7
                                                                         mins</span> <span class="details">
-                                                                        <span class="notification-icon blue-bgcolor"> <i
-                                                                                class="fa fa-comments-o"></i>
+                                                                        <span class="notification-icon blue-bgcolor"> <i class="fa fa-comments-o"></i>
                                                                         </span> <b>Sneha Jogi </b>sent you a message.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">12
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon pink"> <i
-                                                                                class="fa fa-heart"></i>
+                                                                        mins</span> <span class="details"> <span class="notification-icon pink"> <i class="fa fa-heart"></i>
                                                                         </span> <b>Ravi Patel </b>like your photo.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">15
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon yellow"> <i
-                                                                                class="fa fa-warning"></i> </span>
+                                                                        mins</span> <span class="details"> <span class="notification-icon yellow"> <i class="fa fa-warning"></i> </span>
                                                                         Warning! </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">10
                                                                         hrs</span> <span class="details">
-                                                                        <span class="notification-icon red"> <i
-                                                                                class="fa fa-times"></i> </span>
+                                                                        <span class="notification-icon red"> <i class="fa fa-times"></i> </span>
                                                                         Application
                                                                         error. </span> </a> </li>
                                                         </ul>
@@ -94,15 +84,12 @@
                                             <!-- notification_End -->
 
                                             <!-- Dropdown_User -->
-                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="true">
+                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true">
                                                     <img class="img-circle pro_pic" src="images/user3.png" alt=""> </a>
                                                 <ul class="dropdown-menu dropdown-menu-default">
                                                     <li>
                                                         <div class="user-panel">
-                                                            <div class="user_image"> <img src="images/user3.png"
-                                                                    class="img-circle mCS_img_loaded" alt=""> </div>
+                                                            <div class="user_image"> <img src="images/user3.png" class="img-circle mCS_img_loaded" alt=""> </div>
                                                             <div class="info">
                                                                 <p> Pankaj Kumar </p>
                                                                 <a href="#"> info@offerplant.com</a>
@@ -145,8 +132,7 @@
                     </li>
                     <li> <a href="customers.php" class=" active"> <i class="fas fa-user"></i><span>Customers</span></a>
                     </li>
-                    <li> <a href="products.php" class=" active"><i
-                                class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
+                    <li> <a href="products.php" class=" active"><i class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
                     <li> <a href="dailyTask.php" class=" active"><i class="fas fa-tasks"></i><span>Daily
                                 Task</span></a>
                     </li>
@@ -170,37 +156,65 @@
                                 </div>
                             </div>
                         </div>
+                        <?php
+                        include 'dbcon.php';
+                        $selectCust = "select * from customerdb where id = $custid";
+                        $query = mysqli_query($con, $selectCust);
+                        $selectProduct = "select * from productdb";
+                        $productquery = mysqli_query($con,$selectProduct);
+                        $resCust = mysqli_fetch_array($query);
+                        $productlist = explode(",",$resCust['customerProduct']);
+                        ?>
                         <br><br>
-                        <div class="productContainer">
-                            <h1>Products for the customer</h1>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label product-label" for="flexCheckDefault">
-                                    Product -1 
-                                </label>
+                        <div class="card">
+                            <div class="card-header">
+                                <h1>Products for <?php echo $resCust['name']; ?></h1>
+                                <span>Date :<?php echo date("d-m-Y"); ?></span>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label product-label" for="flexCheckChecked">
-                                    Product - 2
-                                </label>
+                            <div class="card-body">
+                                <?php 
+                                    while($resProduct = mysqli_fetch_array($productquery)){
+                                ?>
+                                <div class="productChkBox">
+                                    <input type="checkbox" class="form-check-input" value=""><?php echo $resProduct['productName']; ?>
+                                </div>
+                                <?php 
+                                }
+                                ?>
+                                <!-- <div class="productChkBox">
+                                    <input type="checkbox" class="form-check-input" value="">Product-2
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Total Amount</button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Total Amount" disabled>
+                                        </div><!-- /input-group -->
+                                    </div><!-- /.col-lg-6 -->
+                                    <div class="col-lg-4">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Pay Amount</button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Pay Amount">
+                                        </div><!-- /input-group -->
+                                    </div><!-- /.col-lg-6 -->
+                                    <div class="col-lg-4">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Due Amount</button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Due Amount" disabled>
+                                        </div><!-- /input-group -->
+                                    </div><!-- /.col-lg-6 -->
+                                </div><!-- /.row -->
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label product-label" for="flexCheckChecked">
-                                    Product - 3
-                                </label>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-success">Save</button>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label product-label" for="flexCheckChecked">
-                                    Product - 4
-                                </label>
-                            </div>
-                            <div class="amt">Calculated Amount</div>
-                            <input type="submit" value="Save" class=""/>
                         </div>
-
                     </div>
                     <!-- End Rightbar -->
                 </div>

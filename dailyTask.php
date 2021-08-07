@@ -14,9 +14,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!--Font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700,700i" rel="stylesheet">
 </head>
 
@@ -30,11 +28,8 @@
                 <div class="container_header phone_view border_top_bott">
                     <div class="row">
                         <div class="col-md-12 d-flex justify-content-between align-items-center">
-                            <div class="menu-icon"> <a href="javascript:void(0)"
-                                    class="menu-toggler sidebar-toggler"></a> </div>
-                            <div class="logo d-flex align-items-center justify-content-center"> <a
-                                    href="javascript:void(0)"> <strong class="logo_icon"> <img
-                                            src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
+                            <div class="menu-icon"> <a href="javascript:void(0)" class="menu-toggler sidebar-toggler"></a> </div>
+                            <div class="logo d-flex align-items-center justify-content-center"> <a href="javascript:void(0)"> <strong class="logo_icon"> <img src="images/small-logo.png" alt=""> </strong> <span class="logo-default">
                                         <img src="images/small-logo.png" alt=""> </span> </a> </div>
                             <div class="right_detail">
                                 <div class="row d-flex align-items-center justify-content-end">
@@ -42,9 +37,7 @@
                                         <div class="right_bar_top d-flex align-items-center">
 
                                             <!-- notification_Start -->
-                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="false">
+                                            <div class="dropdown dropdown-notification"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false">
                                                     <i class="fa fa-bell"></i> <span class="badge_coun"> 6 </span> </a>
                                                 <ul class="dropdown-menu scroll_auto height_fixed">
                                                     <li class="bigger">
@@ -54,8 +47,7 @@
                                                     <li>
                                                         <ul class="dropdown-menu-list">
                                                             <li> <a href="javascript:void(0)"> <span class="time">just
-                                                                        now</span> <span class="details"> <span
-                                                                            class="notification-icon deepPink-bgcolor">
+                                                                        now</span> <span class="details"> <span class="notification-icon deepPink-bgcolor">
                                                                             <i class="fa fa-check"></i> </span>
                                                                         Congratulations!. </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">3
@@ -66,25 +58,19 @@
                                                                 </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">7
                                                                         mins</span> <span class="details">
-                                                                        <span class="notification-icon blue-bgcolor"> <i
-                                                                                class="fa fa-comments-o"></i>
+                                                                        <span class="notification-icon blue-bgcolor"> <i class="fa fa-comments-o"></i>
                                                                         </span> <b>Sneha Jogi </b>sent you a message.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">12
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon pink"> <i
-                                                                                class="fa fa-heart"></i>
+                                                                        mins</span> <span class="details"> <span class="notification-icon pink"> <i class="fa fa-heart"></i>
                                                                         </span> <b>Ravi Patel </b>like your photo.
                                                                     </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">15
-                                                                        mins</span> <span class="details"> <span
-                                                                            class="notification-icon yellow"> <i
-                                                                                class="fa fa-warning"></i> </span>
+                                                                        mins</span> <span class="details"> <span class="notification-icon yellow"> <i class="fa fa-warning"></i> </span>
                                                                         Warning! </span> </a> </li>
                                                             <li> <a href="javascript:void(0)"> <span class="time">10
                                                                         hrs</span> <span class="details">
-                                                                        <span class="notification-icon red"> <i
-                                                                                class="fa fa-times"></i> </span>
+                                                                        <span class="notification-icon red"> <i class="fa fa-times"></i> </span>
                                                                         Application
                                                                         error. </span> </a> </li>
                                                         </ul>
@@ -94,15 +80,12 @@
                                             <!-- notification_End -->
 
                                             <!-- Dropdown_User -->
-                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)"
-                                                    class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                                    data-close-others="true" aria-expanded="true">
+                                            <div class="dropdown dropdown-user"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true">
                                                     <img class="img-circle pro_pic" src="images/user3.png" alt=""> </a>
                                                 <ul class="dropdown-menu dropdown-menu-default">
                                                     <li>
                                                         <div class="user-panel">
-                                                            <div class="user_image"> <img src="images/user3.png"
-                                                                    class="img-circle mCS_img_loaded" alt=""> </div>
+                                                            <div class="user_image"> <img src="images/user3.png" class="img-circle mCS_img_loaded" alt=""> </div>
                                                             <div class="info">
                                                                 <p> Pankaj Kumar </p>
                                                                 <a href="#"> info@offerplant.com</a>
@@ -145,8 +128,7 @@
                     </li>
                     <li> <a href="customers.php" class=" active"> <i class="fas fa-user"></i><span>Customers</span></a>
                     </li>
-                    <li> <a href="products.php" class=" active"><i
-                                class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
+                    <li> <a href="products.php" class=" active"><i class="fas fa-shopping-bag"></i><span>Products</span></a> </li>
                     <li> <a href="dailyTask.php" class=" active"><i class="fas fa-tasks"></i><span>Daily
                                 Task</span></a>
                     </li>
@@ -171,91 +153,54 @@
                             </div>
                         </div>
                         <br><br>
-                        <div id="accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne">
-                                            Customers-Group - 1
-                                        </button>
-                                    </h5>
-                                </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        <div class="list-group">
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">
-                                                Customer - 1
-                                            </a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">Customer- 2</a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">
-                                                Customer- 3
-                                            </a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">Customer -4 </a>
-                                            <a href="dailyPaymentEntry.php"
-                                                class="list-group-item list-group-item-action disabled">Customer -5</a>
+                        <div id="accordion">
+                            <?php
+                            include 'dbcon.php';
+                            $q = "select * from groupdb ";
+
+                            $query = mysqli_query($con, $q);
+                            $i=1;
+                            while ($res = mysqli_fetch_array($query)) {
+                                $groupid = $res['id'];
+                            ?>
+                                <div class="card">
+                                    <div class="card-header" id="<?php echo "heading-".$i ?>">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="<?php echo "#collapse-".$i ?>" aria-expanded="true" aria-controls="collapseOne">
+                                                <?php echo $res['groupName']; ?>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <?php
+                                                
+                                    ?>
+                                    <div id="<?php echo "collapse-".$i ?>" class="collapse show" aria-labelledby="<?php echo "heading-".$i ?>" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="list-group">
+                                                        <?php 
+                                                            include 'dbcon.php';
+                                                            $q2 = "select * from customerdb ";
+                                                            $queryTwo = mysqli_query($con, $q2);
+                                                            while ($result = mysqli_fetch_array($queryTwo)) {
+                                                            if($groupid == $result['customerGroup'])
+                                                            {
+                                                        ?>
+                                                        <a href="dailyPaymentEntry.php?id=<?php echo $result['id'];?>" class="list-group-item list-group-item-action">
+                                                            <?php echo $result['name']; ?>
+                                                        </a>
+                                                <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                            data-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                            Customers-Group -2
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        <div class="list-group">
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">
-                                                Customer - 1
-                                            </a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">Customer- 2</a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">
-                                                Customers- 3
-                                            </a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">Customer -4 </a>
-                                            <a href="dailyPaymentEntry.php"
-                                                class="list-group-item list-group-item-action disabled">Customer -5</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            Customers-Group - 3
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        <div class="list-group">
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">
-                                                Customer - 1
-                                            </a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">Customer- 2</a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">
-                                                Customers- 3
-                                            </a>
-                                            <a href="dailyPaymentEntry.php" class="list-group-item list-group-item-action">Customer -4 </a>
-                                            <a href="dailyPaymentEntry.php"
-                                                class="list-group-item list-group-item-action disabled">Customer -5</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            $i++;
+                            }
+                            ?>
                         </div>
                     </div>
                     <!-- End Rightbar -->
