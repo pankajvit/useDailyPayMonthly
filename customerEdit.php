@@ -323,7 +323,7 @@ if(isset($_GET['id'])){
             $query = "update customerdb set name='$cname', address='$address', mobileno='$mobile', customerGroup='$cgroup', customerProduct='$productlist' where id=$idupdate";
             $res = mysqli_query($con, $query);          
             if ($res) {
-        ?>
+            ?>
                 <script>
                     alert("data updated properly");
                     window.location.href='customers.php';

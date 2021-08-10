@@ -161,9 +161,9 @@ $custid = $_GET['id'];
                         $selectCust = "select * from customerdb where id = $custid";
                         $query = mysqli_query($con, $selectCust);
                         $selectProduct = "select * from productdb";
-                        $productquery = mysqli_query($con,$selectProduct);
+                        $productquery = mysqli_query($con, $selectProduct);
                         $resCust = mysqli_fetch_array($query);
-                        $productlist = explode(",",$resCust['customerProduct']);
+                        $productlist = explode(",", $resCust['customerProduct']);
                         ?>
                         <br><br>
                         <div class="card">
@@ -171,49 +171,80 @@ $custid = $_GET['id'];
                                 <h1>Products for <?php echo $resCust['name']; ?></h1>
                                 <span>Date :<?php echo date("d-m-Y"); ?></span>
                             </div>
-                            <div class="card-body">
-                                <?php 
-                                    while($resProduct = mysqli_fetch_array($productquery)){
-                                ?>
-                                <div class="productChkBox">
-                                    <input type="checkbox" class="form-check-input" value=""><?php echo $resProduct['productName']; ?>
+                            <form action=<?php echo "insertDailyPayment.php?id=".$custid;?> method="POST" id="theForm">
+                                <div class="card-body">
+                                    <?php
+                                    $i = 1;
+                                    while ($resProduct = mysqli_fetch_array($productquery)) {
+                                    ?>
+                                        <div class="productChkBox">
+                                            <input type="checkbox" name="product" value="<?php echo $resProduct['price']; ?>" class="form-check-input" id="<?php echo "p" . $i ?>" onclick="totalIt()"><?php echo $resProduct['productName']; ?>
+                                        </div>
+                                    <?php
+                                        $i++;
+                                    }
+                                    ?>
+                                    <!-- <div class="productChkBox">
+                                        <input type="checkbox" class="form-check-input" value="">Product-2
+                                    </div> -->
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button" >Total Amount</button>
+                                                </span>
+                                                <input type="text" value="" name="totalAmt" class="form-control" placeholder="Total Amount" id="total" readonly>
+                                            </div><!-- /input-group -->
+                                        </div><!-- /.col-lg-6 -->
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button">Pay Amount</button>
+                                                </span>
+                                                <input type="text" name="payableAmt" class="form-control" placeholder="Pay Amount" required>
+                                            </div><!-- /input-group -->
+                                        </div><!-- /.col-lg-6 -->
+                                        <?php
+                                            $custid_search = "select * from custdueamt where custid=$custid";
+                                            $custidSearhQuery = mysqli_query($con, $custid_search);
+                                            $custSearch = mysqli_num_rows($custidSearhQuery);
+                                            $resCust = mysqli_fetch_array($custidSearhQuery);
+                                            $dueBalance=0;
+                                            $advanceBalance=0;
+                                            if($custSearch) {
+                                                $fetchedBalance = $resCust['dueAmt'];
+                                                if($fetchedBalance > 0) {
+                                                    $dueBalance = $fetchedBalance;
+                                                } else {
+                                                    $advanceBalance=$fetchedBalance;
+                                                }
+                                            } else {
+                                                $dueBalance=0;
+                                                $advanceBalance=0;
+                                            }
+                                        ?>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button">Due Amount</button>
+                                                </span>
+                                                <input type="text" name="dueAmt" value="<?php echo $dueBalance; ?>" class="form-control" placeholder="Due Amount" readonly>
+                                            </div><!-- /input-group -->
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button">Advance Amount</button>
+                                                </span>
+                                                <input type="text" name="dueAmt" value="<?php echo -($advanceBalance); ?>" class="form-control" placeholder="Advance Amount" readonly>
+                                            </div><!-- /input-group -->
+                                        </div><!-- /.col-lg-6 -->
+                                    </div><!-- /.row -->
                                 </div>
-                                <?php 
-                                }
-                                ?>
-                                <!-- <div class="productChkBox">
-                                    <input type="checkbox" class="form-check-input" value="">Product-2
-                                </div> -->
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">Total Amount</button>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Total Amount" disabled>
-                                        </div><!-- /input-group -->
-                                    </div><!-- /.col-lg-6 -->
-                                    <div class="col-lg-4">
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">Pay Amount</button>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Pay Amount">
-                                        </div><!-- /input-group -->
-                                    </div><!-- /.col-lg-6 -->
-                                    <div class="col-lg-4">
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">Due Amount</button>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Due Amount" disabled>
-                                        </div><!-- /input-group -->
-                                    </div><!-- /.col-lg-6 -->
-                                </div><!-- /.row -->
-                            </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-success">Save</button>
-                            </div>
+                                <div class="card-footer">
+                                    <button type="submit" name="save" class="btn btn-success">Save</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <!-- End Rightbar -->
@@ -239,6 +270,18 @@ $custid = $_GET['id'];
         <script src="js/custom-dashboard.js"></script>
         <!--jquery js -->
         <script src="js/custom.js"></script>
+        <script>
+            function totalIt() {
+                var input = document.getElementsByName("product");
+                var total = 0;
+                for (var i = 0; i < input.length; i++) {
+                    if (input[i].checked) {
+                        total += parseFloat(input[i].value);
+                    }
+                }
+                document.getElementById("total").value = total.toFixed(2);
+            }
+        </script>
 </body>
 
 <!-- Mirrored from sbtechnosoft.com/multinod/v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 May 2021 04:01:50 GMT -->
