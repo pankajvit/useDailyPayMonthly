@@ -112,7 +112,7 @@
           <li> <a href="products.php" class=" active"><i class="fas fa-shopping-bag"></i><span>Products</span></a>
           </li>
           <li> <a href="dailyTask.php" class=" active"><i class="fas fa-tasks"></i><span>Daily Task</span></a></li>
-          <li> <a href="index.php" class=" active"><i class="fas fa-file-alt"></i><span>Collection Report</span></a>
+          <li> <a href="collectionpage.php" class=" active"><i class="fas fa-file-alt"></i><span>Collection Report</span></a>
           </li>
           <li> <a href="index.php" class=" active"> <i class="fas fa-file-invoice"></i> <span>Dues Report</span></a>
           </li>
