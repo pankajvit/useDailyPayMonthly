@@ -201,7 +201,7 @@ $custid = $_GET['id'];
                                                 <span class="input-group-btn">
                                                     <button class="btn btn-default" type="button">Pay Amount</button>
                                                 </span>
-                                                <input type="text" name="payableAmt" class="form-control" placeholder="Pay Amount" required>
+                                                <input type="text" name="payableAmt" class="form-control" placeholder="Pay Amount">
                                             </div><!-- /input-group -->
                                         </div><!-- /.col-lg-6 -->
                                         <?php

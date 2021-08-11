@@ -13,7 +13,7 @@ if (isset($_POST['save'])) {
     // print_r($insertquery);
     $res = mysqli_query($con, $insertquery);
     if ($res) {
-        ?>
+?>
         <script>
             alert("data inserted properly");
         </script>
@@ -23,7 +23,7 @@ if (isset($_POST['save'])) {
         <script>
             alert("data not inserted properly");
         </script>
-    <?php
+        <?php
     }
     $custid_search = "select * from custdueamt where custid=$custid";
     $custidSearhQuery = mysqli_query($con, $custid_search);
@@ -33,13 +33,69 @@ if (isset($_POST['save'])) {
         $resultUser = mysqli_query($con, $selectUser);
         $resCust = mysqli_fetch_array($resultUser);
         $dueAmt = $resCust['dueAmt'];
-        if($totalAmt == )
-        if($payableAmt == NULL) {
-            $dueAmt=$dueAmt + $totalAmt;
+        if ($totalAmt == NULL) {
+            if ($payableAmt > $dueAmt) {
+                $dueAmt = $dueAmt - $payableAmt;
+                $updateDueAmtQuery = "update custdueamt set dueAmt='$dueAmt' where custid='$custid'";
+                $res = mysqli_query($con, $updateDueAmtQuery);
+                if ($res) {
+                ?>
+                    <script>
+                        alert("data updated properly");
+                        window.location.href='index.php';
+                    </script>
+                <?php
+                } else {
+                ?>
+                    <script>
+                        alert("data not updated properly");
+                    </script>
+                <?php
+                }
+            } else if ($payableAmt < $dueAmt) {
+                $dueAmt = $dueAmt - $payableAmt;
+                $updateDueAmtQuery = "update custdueamt set dueAmt='$dueAmt' where custid='$custid'";
+                $res = mysqli_query($con, $updateDueAmtQuery);
+                if ($res) {
+                ?>
+                    <script>
+                        alert("data updated properly");
+                        window.location.href='index.php';
+                    </script>
+                <?php
+                } else {
+                ?>
+                    <script>
+                        alert("data not updated properly");
+                    </script>
+                <?php
+                }
+            } else if ($payableAmt == $dueAmt) {
+                $dueAmt = $dueAmt - $payableAmt;
+                $updateDueAmtQuery = "update custdueamt set dueAmt='$dueAmt' where custid='$custid'";
+                $res = mysqli_query($con, $updateDueAmtQuery);
+                if ($res) {
+                ?>
+                    <script>
+                        alert("data updated properly");
+                        window.location.href='index.php';
+                    </script>
+                <?php
+                } else {
+                ?>
+                    <script>
+                        alert("data not updated properly");
+                    </script>
+                <?php
+                }
+            }
+        }
+        if ($payableAmt == NULL) {
+            $dueAmt = $dueAmt + $totalAmt;
             $updateDueAmtQuery = "update custdueamt set dueAmt='$dueAmt' where custid='$custid'";
-            $res = mysqli_query($con,$updateDueAmtQuery);          
+            $res = mysqli_query($con, $updateDueAmtQuery);
             if ($res) {
-            ?>
+                ?>
                 <script>
                     alert("data updated properly");
                 </script>
@@ -51,15 +107,53 @@ if (isset($_POST['save'])) {
                 </script>
             <?php
             }
-        } else if($payableAmt == $totalAmt) {
-
+        } else if ($payableAmt == $totalAmt) {
+            $dueAmt=$dueAmt;
+            header('location: index.php');
+        } else if($payableAmt < $totalAmt) {
+            $remainAmt = $totalAmt - $payableAmt;
+            $dueAmt = $dueAmt + $remainAmt;
+            $updateDueAmtQuery = "update custdueamt set dueAmt='$dueAmt' where custid='$custid'";
+            $res = mysqli_query($con, $updateDueAmtQuery);
+            if ($res) {
+                ?>
+                <script>
+                    alert("data updated properly");
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    alert("data not updated properly");
+                </script>
+            <?php
+            }
+        } else if($payableAmt > $totalAmt) {
+            $remainAmt = $payableAmt - $totalAmt;
+            $dueAmt = $dueAmt - $remainAmt;
+            $updateDueAmtQuery = "update custdueamt set dueAmt='$dueAmt' where custid='$custid'";
+            $res = mysqli_query($con, $updateDueAmtQuery);
+            if ($res) {
+                ?>
+                <script>
+                    alert("data updated properly");
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    alert("data not updated properly");
+                </script>
+            <?php
+            }
         }
-    } else {
+    }
+     else {
         if ($payableAmt == NULL) {
             $insertDueAmountQuery = "INSERT INTO custdueamt(custid, dueAmt) VALUES ('$custid', '$totalAmt')";
             $insertDueAmountQueryResult = mysqli_query($con, $insertDueAmountQuery);
             if ($insertDueAmountQueryResult) {
-                ?>
+            ?>
                 <script>
                     alert("data inserted properly");
                 </script>
@@ -71,7 +165,7 @@ if (isset($_POST['save'])) {
                 </script>
             <?php
             }
-        } else if($payableAmt < $totalAmt) {
+        } else if ($payableAmt < $totalAmt) {
             $DuesAmount = (int)$totalAmt - (int)$payableAmt;
             $insertDueAmountQuery = "INSERT INTO custdueamt(custid, dueAmt) VALUES ('$custid', '$DuesAmount')";
             $insertDueAmountQueryResult = mysqli_query($con, $insertDueAmountQuery);
@@ -119,7 +213,7 @@ if (isset($_POST['save'])) {
                 <script>
                     alert("data not inserted properly");
                 </script>
-            <?php
+<?php
             }
         }
     }
