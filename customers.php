@@ -142,13 +142,13 @@
                 <div class="container-fluid">
                     <div class="sec-title">
                         <div class="row d-flex align-items-center">
-                            <div class="main__title">
+                            <!-- <div class="main__title">
                                 <img src="assets/hello.svg" alt="" />
                                 <div class="main__greeting">
                                     <h1>Hello OfferPlant</h1>
                                     <p>Welcome to your admin dashboard</p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="content-bar">
