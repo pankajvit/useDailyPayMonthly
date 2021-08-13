@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])) {
+        echo "you are logged out";
+        header('location:login.php');
+    }
+?>
 <!doctype html>
 <html>
 
@@ -73,14 +80,14 @@
                             <div class="user-panel">
                               <div class="user_image"> <img src="images/user3.png" class="img-circle mCS_img_loaded" alt=""> </div>
                               <div class="info">
-                                <p> Pankaj Kumar </p>
+                                <p> <?php echo $_SESSION['username']; ?> </p>
                                 <a href="#"> info@offerplant.com</a>
                               </div>
                             </div>
                           </li>
                           <li> <a href="#"> <i class="fas fa-user-circle"></i> Profile </a> </li>
                           <li> <a href="#"> <i class="fas fa-user-cog"></i> Settings </a> </li>
-                          <li> <a href="#"> <i class="fas fa-sign-out-alt"></i> Log Out </a> </li>
+                          <li> <a href="logout.php"> <i class="fas fa-sign-out-alt"></i> Log Out </a> </li>
                         </ul>
                       </div>
                     </div>
@@ -99,7 +106,7 @@
         <div class="user-panel">
           <div class="user_image"> <img src="images/about-1.jpg" class="img-circle mCS_img_loaded" alt=""> </div>
           <div class="info">
-            <p> Pankaj Rai - Admin</p>
+            <p><?php echo $_SESSION['username']; ?></p>
             <!-- <a href="#"> <i class="fa fa-circle text-success"></i> Online</a> </div> -->
           </div>
         </div>

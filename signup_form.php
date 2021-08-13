@@ -1,9 +1,11 @@
 <?php
 session_start();
+$emailExistboolVariable = 0;
+$signUpPageMsg = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +24,7 @@ session_start();
 <body>
     <?php
     include 'dbcon.php';
-    if(isset($_POST['submit'])) {
+    if (isset($_POST['submit'])) {
         $username = mysqli_real_escape_string($con, $_POST['name']);
         $bname = mysqli_real_escape_string($con, $_POST['bname']);
         $mobileno = mysqli_real_escape_string($con, $_POST['mobileno']);
@@ -39,37 +41,32 @@ session_start();
         $emailquery = "select * from registration where email = '$email'";
         $query = mysqli_query($con, $emailquery);
         $emailcount = mysqli_num_rows($query);
-
-        if($emailcount > 0) {
-            echo "email already exists";
+        if ($emailcount > 0) {
+            $emailExistMsg = "email already exists!";
+            $signUpPageMsg = 1;
         } else {
-            if($password === $cpassword) {
+            if ($password === $cpassword) {
                 $insertquery = "insert into registration(name, bname, mobileNo, email, password, cpassword, token, status) values ('$username', '$bname', '$mobileno', '$email','$pass','$cpass', '$token', 'inactive')";
-                $iquery = mysqli_query($con,$insertquery);
-                if($iquery) {
+                $iquery = mysqli_query($con, $insertquery);
+                if ($iquery) {
                     $subject = "Email Activation";
                     $body = "Hi, $username. Click here to activate your account
                     http://localhost/UseDailyPayMonthly/activate.php?token=$token";
                     $sender_email = "From: pankaj.kumar18@vit.edu";
-                    if(mail($email, $subject, $body, $sender_email)) {
-                        $_SESSION['msg']="check your mail to activate your account $email";
+                    if (mail($email, $subject, $body, $sender_email)) {
+                        $_SESSION['msg'] = "check your mail to activate your account $email";
                         header('location:login.php');
                     } else {
-                            echo "Email sending failed...";
-                        }
-                    } else {
-                    ?>
-                        <script>
-                            alert("No insertion of data");
-                        </script>
-                    <?php
+                        $failedEmailMsg = "Email sending failed...";
+                        $signUpPageMsg = 2;
                     }
-            }else {
-                ?>
-                    <script>
-                        alert("Password are not matching");
-                    </script>
-                <?php
+                } else {
+                    $noInsertionData = "No insertion of data";
+                    $signUpPageMsg = 3;
+                }
+            } else {
+                $passwordNotMatchingMsg = "Password are not matching";
+                $signUpPageMsg = 4;
             }
         }
     }
@@ -84,6 +81,37 @@ session_start();
                                 <h1>Signup</h1>
                             </div>
                         </div>
+                        <?php
+                        if ($signUpPageMsg == 1) {
+                        ?>
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Alert!</strong> <?php echo $emailExistMsg; ?>
+                            </div>
+                        <?php
+                        } else if ($signUpPageMsg == 2) {
+                        ?>
+                            <div class="alert alert-success alert-dismissible fade show">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Alert!</strong> <?php $failedEmailMsg; ?>
+                            </div>
+                        <?php
+                        } else if ($signUpPageMsg == 3) {
+                        ?>
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Alert!</strong> <?php echo $noInsertionData; ?>
+                            </div>
+                        <?php
+                        } else if ($signUpPageMsg == 4) {
+                        ?>
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Alert!</strong> <?php echo $passwordNotMatchingMsg; ?>
+                            </div>
+                        <?php
+                        }
+                        ?>
                         <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Name</label>

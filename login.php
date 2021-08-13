@@ -40,14 +40,14 @@
                    if(isset($_POST['rememberme'])) {
                        setcookie('emailcookie',$email,time()+86400);
                        setcookie('passwordcookie',$password,time()+86400);
-                       header('location:home.php');
+                       header('location:index.php');
                    } else {
-                       header('location:home.php');
+                       header('location:index.php');
                    }
                    echo "login successful";
                    ?>
                        <script>
-                           location.replace('home.php');
+                           location.replace('index.php');
                        </script>
                    <?php
                } else {
